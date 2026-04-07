@@ -13,18 +13,38 @@ body {
   font-family:'Poppins', sans-serif;
   background:#f4f6f9;
   color:#333;
+  scroll-behavior:smooth;
+}
+
+/* NAV */
+nav {
+  background:white;
+  padding:10px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+  position:sticky;
+  top:0;
+}
+
+nav a {
+  margin:0 10px;
+  text-decoration:none;
+  color:#333;
+  font-size:14px;
 }
 
 /* HERO */
 .hero {
   background: linear-gradient(135deg, #4e54c8, #8f94fb);
   color:white;
-  padding:60px 20px;
+  padding:70px 20px;
   text-align:center;
 }
 
 .hero h1 {
-  font-size:28px;
+  font-size:32px;
   margin-bottom:10px;
 }
 
@@ -33,11 +53,22 @@ body {
   opacity:0.9;
 }
 
-/* CARD */
+.btn-main {
+  margin-top:20px;
+  display:inline-block;
+  padding:12px 18px;
+  background:white;
+  color:#4e54c8;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:500;
+}
+
+/* SECTIONS */
 .section {
   background:white;
-  margin:15px;
-  padding:20px;
+  margin:20px;
+  padding:25px;
   border-radius:15px;
   box-shadow:0 10px 25px rgba(0,0,0,0.05);
 }
@@ -54,7 +85,7 @@ h2 {
 }
 
 .card {
-  padding:15px;
+  padding:20px;
   border-radius:12px;
   background:#f9fafc;
   text-align:center;
@@ -69,26 +100,27 @@ h2 {
 /* CALENDAR */
 iframe {
   width:100%;
-  height:350px;
+  height:400px;
   border:none;
   border-radius:10px;
 }
 
-/* BUTTON */
+/* DOC BUTTON */
 .btn {
-  display:inline-block;
-  padding:10px 15px;
-  margin-top:10px;
+  display:block;
+  margin:10px 0;
+  padding:12px;
   background:#4e54c8;
   color:white;
   border-radius:8px;
   text-decoration:none;
+  text-align:center;
 }
 
 /* FOOTER */
 footer {
   text-align:center;
-  padding:20px;
+  padding:30px;
   font-size:12px;
   color:#777;
 }
@@ -97,17 +129,27 @@ footer {
 
 <body>
 
+<nav>
+  <strong>🎵 Institut Willems</strong>
+  <div>
+    <a href="#methode">Méthode</a>
+    <a href="#calendar">Calendrier</a>
+    <a href="#docs">Documents</a>
+  </div>
+</nav>
+
 <div class="hero">
   <h1>🎵 Institut Edgar Willems</h1>
-  <p>Espace parents – prototype de gestion simplifiée</p>
+  <p>Un espace simple pour centraliser les informations et faciliter la communication avec les parents</p>
+  <a href="#calendar" class="btn-main">Voir le calendrier</a>
 </div>
 
 <div class="section">
-  <h2>🎯 Notre approche</h2>
-  <p>Une méthode musicale complète basée sur le développement global de l’enfant, combinant écoute, rythme, mouvement et expression.</p>
+  <h2>🎯 Espace parents</h2>
+  <p>Retrouvez toutes les informations importantes en un seul endroit : horaires, événements, documents et communications.</p>
 </div>
 
-<div class="section">
+<div class="section" id="methode">
   <h2>🎶 La méthode</h2>
   <div class="grid">
     <div class="card">🎧<br>Audition</div>
@@ -117,23 +159,23 @@ footer {
   </div>
 </div>
 
-<div class="section">
+<div class="section" id="calendar">
   <h2>📅 Calendrier des cours</h2>
   <iframe src="https://calendar.google.com/calendar/embed?src=TON_CALENDAR_ID"></iframe>
 </div>
 
 <div class="section">
-  <h2>📩 Communication</h2>
-  <p>Exemple de message automatique :</p>
+  <h2>📩 Communication simplifiée</h2>
+  <p>Les parents peuvent être informés automatiquement en cas de changement :</p>
   <blockquote>
     “Bonjour, le cours de mercredi est annulé. Merci de votre compréhension.”
   </blockquote>
 </div>
 
-<div class="section">
+<div class="section" id="docs">
   <h2>📎 Documents</h2>
-  <a class="btn" href="#">📄 Plan d’études</a><br>
-  <a class="btn" href="#">📄 Règlement</a><br>
+  <a class="btn" href="#">📄 Plan d’études</a>
+  <a class="btn" href="#">📄 Règlement</a>
   <a class="btn" href="#">📄 Inscription</a>
 </div>
 
